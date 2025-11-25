@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Adaptive Playboy (Free LLM)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Luca — Adaptive Playboy (free LLM)</h1>
+
+    <div class="top-row">
+      <input id="hfKey" type="password" placeholder="Hugging Face API Key (paste here)" />
+      <select id="hfModel">
+        <option value="gpt2">gpt2 (very small, fast)</option>
+        <option value="bigscience/bloom">bloom</option>
+        <option value="tiiuae/falcon-7b-instruct">falcon-7b-instruct (may be slow)</option>
+      </select>
+      <button id="saveKeyBtn">Save key (local)</button>
+    </div>
+
+    <div class="controls">
+      <button id="resetBtn">Reset Memory</button>
+      <span id="xpDisplay">XP: 0</span>
+    </div>
+
+    <div id="chatWindow" class="chat-window"></div>
+
+    <div class="input-area">
+      <input id="userInput" type="text" placeholder="Write something smooth…" />
+      <button id="sendBtn">Send</button>
+    </div>
+
+    <div class="notes">
+      <small>Model replies are generated live by a free Hugging Face model you select. Your API key is stored only locally in the browser (localStorage).</small>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
